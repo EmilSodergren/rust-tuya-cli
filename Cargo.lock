@@ -7,12 +7,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bf8dcb5b4bbaa28653b647d8c77bd4ed40183b48882e130c1f1ffb73de069fd7"
 
 [[package]]
-name = "arrayvec"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23b62fc65de8e4e7f52534fb52b0f3ed04746ae267519eef2a83941e8085068b"
-
-[[package]]
 name = "atomic-counter"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -165,19 +159,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
-name = "lexical-core"
-version = "0.7.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "db65c6da02e61f55dae90a0ae427b2a5f6b3e8db09f58d10efab23af92592616"
-dependencies = [
- "arrayvec",
- "bitflags",
- "cfg-if",
- "ryu",
- "static_assertions",
-]
-
-[[package]]
 name = "libc"
 version = "0.2.80"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -205,21 +186,27 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0ee1c47aaa256ecabcaea351eae4a9b01ef39ed810004e298d2511ed284b1525"
 
 [[package]]
-name = "nom"
-version = "5.1.2"
+name = "minimal-lexical"
+version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ffb4262d26ed83a1c0a33a38fe2bb15797329c85770da05e6b828ddb782627af"
+checksum = "9c64630dcdd71f1a64c435f54885086a0de5d6a12d104d69b165fb7d5286d677"
+
+[[package]]
+name = "nom"
+version = "7.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7ffd9d26838a953b4af82cbeb9f1592c6798916983959be223a7124e992742c1"
 dependencies = [
- "lexical-core",
  "memchr",
+ "minimal-lexical",
  "version_check",
 ]
 
 [[package]]
 name = "num"
-version = "0.3.1"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8b7a8e9be5e039e2ff869df49155f1c06bd01ade2117ec783e56ab0932b67a8f"
+checksum = "43db66d1170d347f9a065114077f7dccb00c1b9478c89384490a3425279a4606"
 dependencies = [
  "num-bigint",
  "num-complex",
@@ -231,9 +218,9 @@ dependencies = [
 
 [[package]]
 name = "num-bigint"
-version = "0.3.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5e9a41747ae4633fce5adffb4d2e81ffc5e89593cb19917f8fb2cc5ff76507bf"
+checksum = "74e768dff5fb39a41b3bcd30bb25cf989706c90d028d1ad71971987aa309d535"
 dependencies = [
  "autocfg",
  "num-integer",
@@ -242,9 +229,9 @@ dependencies = [
 
 [[package]]
 name = "num-complex"
-version = "0.3.1"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "747d632c0c558b87dbabbe6a82f3b4ae03720d0646ac5b7b4dae89394be5f2c5"
+checksum = "26873667bbbb7c5182d4a37c1add32cdf09f841af72da53318fdb81543c15085"
 dependencies = [
  "num-traits",
 ]
@@ -283,9 +270,9 @@ dependencies = [
 
 [[package]]
 name = "num-rational"
-version = "0.3.2"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12ac428b1cb17fce6f731001d307d351ec70a6d202fc2e60f7d4c5e42d8f4f07"
+checksum = "d41702bd167c2df5520b384281bc111a4b5efcf7fbc4c9c222c815b07e0a6a6a"
 dependencies = [
  "autocfg",
  "num-bigint",
@@ -405,9 +392,9 @@ dependencies = [
 
 [[package]]
 name = "rust-tuyapi"
-version = "0.4.1"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c4bbd6af6d748a9142c190d709b2636804baa4bcda9c8c452ba6887f7a994cf5"
+checksum = "40911e7aed279f24002abb23ae6eb2f0604bbde7e6bc83a59f791f2638fc673e"
 dependencies = [
  "atomic-counter",
  "base64",
@@ -462,12 +449,6 @@ dependencies = [
  "ryu",
  "serde",
 ]
-
-[[package]]
-name = "static_assertions"
-version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 
 [[package]]
 name = "strsim"
